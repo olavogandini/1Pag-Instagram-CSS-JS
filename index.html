@@ -1,0 +1,71 @@
+<!--hmtl:5-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--padrao caracteres BR-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--compatibilidade de site com navegadores-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--compatibilidade de site com celular-->
+    <link rel="stylesheet" href="./styles.css"> <!--RELACIONAMENTO DO CODIGO HTML COM O CODIGO CSS-->
+    <title>Document</title>
+</head>
+<body>
+    <div class="conteiner-imagens">
+        <img src="./imagens/celular.png" class="img-celular">
+        <img src="./imagens/insta1.png" class="imagem-celular">
+        <img src="./imagens/insta2.png" class="imagem-celular" id="troca-imagem">
+    </div>
+
+    <div class="container-itens"> <!--TAG PARA DIVISÃO E AGRUPAMENTO-->
+        <div class="container-form">
+            <img src="./imagens/insta-logo.png" class="insta-logo">
+
+            <input placeholder="Telefone, nome de usuario">
+            <input placeholder="Senha">
+
+            <button>Entrar</button>
+
+            <a class="login-facebook">Entrar com Facebook</a><!--TAG PARA LINK--><!--HREF ENCAMINHA PARA PAGINA DE WEB-->
+            <a class="esqueceu-senha">Esqueceu a Senha?</a>
+        </div>
+
+        <div class="container-cadastro">
+            <p class="paragrafo-conta">Não Tem uma conta?</p><a class="link-cadastro">Cadastrar-se</a><!--TAG PARA PARAGRAFO-->
+        </div>
+
+        <p class="paragrafo-app">Obtenha o aplicativo</p>
+
+        <div class="container-app">
+            <img src="./imagens/ios.png" alt="Logo IOS" class="logo-app"> <!--ALT CASO NÃO APREÇA A IMAGEM OU PARA LEITURA POR AUDIO-->
+            <img src="./imagens/google.png" class="logo-app">
+        </div>
+
+    </div>
+
+</body>
+
+
+<script>
+    /*******************************    AREA PARA JAVA SCRIPT    **************************************/
+
+    let imagem = document.getElementById("troca-imagem")/*DOCUMENT É A REFERENCIA PARA JAVA ACESSAR HTML*/
+    
+    
+    function trocaImagem()
+    {
+        if(imagem.style.opacity == 0)
+        {
+            imagem.style.opacity = 1
+        }
+        else
+        {
+            imagem.style.opacity = 0
+        } 
+    }
+
+    setInterval(function() {
+        trocaImagem()
+        }, 3000);
+
+</script>
+
+</html>
